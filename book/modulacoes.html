@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="pt" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Modulações - SDR e DX</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="modulacoes.html" class="active"><strong aria-hidden="true">5.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html"><strong aria-hidden="true">6.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">7.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="gnuradio.html"><strong aria-hidden="true">8.</strong> GNU Radio</a></li><li class="chapter-item expanded "><a href="mais.html"><strong aria-hidden="true">9.</strong> Mais</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">SDR e DX</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="modulações"><a class="header" href="#modulações">Modulações</a></h1>
+<p>A modulação, dentro de uma tal convenção, consiste em uma operação sobre ondas periódicas para que estas assumam a forma específica de um tal modelo que permita passagem de dados. Essa codificação permite embutir informações em ondas eletromagnéticas. Já a de-modulação ocorre para que possamos compreender o sinal de forma mais fácil, transformando este em som ou algum outro formato visual humanamente perceptível (ou no caso de digimode, que seja decodificado para a máquina, que algum software depois decodifica para a recepção humana).</p>
+<p><img src="./1_mod.png" alt="imagem1_mod" /></p>
+<h2 id="modulações-analógicas"><a class="header" href="#modulações-analógicas">Modulações analógicas</a></h2>
+<p>Compreende inputs de sinais “naturais”, como a voz humana. A informação a ser modulada é composta de valores que podem variar continuamente.</p>
+<h2 id="am"><a class="header" href="#am">AM</a></h2>
+<p>Apesar de, atualmente virem perdendo espaço, as rádios AM fazem parte da vida de qualquer pessoa que procura se informar por meio do rádio durante uma comuta diária. Sua sigla vem de amplitude modulation, tipo de modulação analógica que usa a amplitude do sinal para conceber a codificação dos dados.</p>
+<p><img src="./mod_2.png" alt="imagem2_mod" /></p>
+<p>Apesar de sua popularidade, sinais AM são originalmente pouco eficientes em sua forma padrão. Para isso desenvolveu-se um ramo da modulação analógica chamado SSB (single side-band) que, como o nome diz, possui somente uma banda lateral, diferente da DSB que possui duas. O recebimento do sinal requer maior complexidade pra decodificação, mas o uso de SDR reduz o custo que viria do equipamento necessário. </p>
+<h2 id="fm"><a class="header" href="#fm">FM</a></h2>
+<p><img src="./mod_3.png" alt="imagem3_mod" /></p>
+<p>Comum quando se fala de rádios musicais, o sinal de frequência modulada (FM) transmite informações por meio de mudanças em sua frequência, enquanto a amplitude da onda se mantém a mesma. Comparando FM e AM, o modo de frequência modulada tem maior resistência à interferências EM externas, além de, normalmente, ser mais eficiente energeticamente.</p>
+<p>Existem duas variações deste tipo de modulação que trabalham com larguras de banda diferentes do FM padrão: WFM (<em>wide-band</em>), mais larga e NFM (<em>narrow-band</em>), menor. Dessa forma, WFM permite melhor qualidade de som (maior quantidade de “dados”), mas NFM ocupa menos espaço de banda. Geralmente, NFM é usada com walkie-talkies e outras formas de <em>two-way radio</em>, comuns em aplicações militares. Para transmissões de TV usa-se WFM, mantendo melhor fidelidade e qualidade.</p>
+<p>Diferentes modulações podem ser utilizadas para quase todas as bandas do espectro de rádio, mas suas diferenças fazem com que sejam adotados padrões nas transmissões. De VHF pra cima, é mais comum o uso de frequência modulada combinada à propagação line of sight. É daí que vem o dito de que “FM não pega tão longe da antena quanto AM” ou “passando do morro a rádio para”. Como AM é mais comum em VHF para baixo, bandas de comunicações normalmente propagadas pelo céu, seu alcance será claramente maior. Em razão da necessidade de FM para uma alocação de frequências bem maior, não faria sentido usá-la em bandas pouco largas, o uso de AM é mais racional. </p>
+<h2 id="cw"><a class="header" href="#cw">CW</a></h2>
+<p>Esta sigla designa “<em>Continuous Wave</em>”, e constitui a primeira forma de transmissão de rádio, usada para o Código Morse. Como diz o nome, sua amplitude e frequência são contínuas, e o sinal é ligado e desligado para codificação. Hoje em dia alguns usuários de rádio amador ainda se comunicam por este meio por diversão.</p>
+<p>Na maior parte das vezes, as comunicações em CW se dão no começo das bandas e ocupam pouco espaço, utilizando uma largura de banda bem estreita.</p>
+<p>(Tecnicamente, código morse é um digimode, mas sua classificação fica confusa dadas as características de seu uso e surgimento).</p>
+<h2 id="modulações-digitais"><a class="header" href="#modulações-digitais">Modulações digitais</a></h2>
+<p>Os sinais que serão modulados são provenientes de máquinas, tendo valores discretos e variando em intervalos de tempo específicos. Também chamada de <strong>digimode</strong> ou <strong>data mode</strong>, relativamente mais moderna, possibilita separar ruídos indesejados na recepção bem mais facilmente.</p>
+<p>Lembrando que essas modulações não se reduzem apenas à comunicação por rádio, mas são utilizadas nas mais diversas aplicações de envio de dados por meio de ondas eletromagnéticas.</p>
+<h2 id="ask-fsk-e-psk"><a class="header" href="#ask-fsk-e-psk">ASK, FSK e PSK</a></h2>
+<p>ASK, ou “Amplitude-shift keying” é o termo geral para modulação digital de amplitude. Seu uso mais simples binário (OOK/BASK) considera um sinal “alto” como 1 e a “ausência” de amplitude como 0. No geral, ASK pode ser usado pra conferir à certas sequências específicas de bits uma certa amplitude.</p>
+<p>Nesse mesmo estilo se dão FSK e PSK, respectivamente trabalhando com frequência e fase da onda. Nos nomes BFSK e BPSK, o B especifica seu uso binário simples.</p>
+<p><img src="./mod_4.png" alt="imagem4_mod" /></p>
+<h2 id="apsk"><a class="header" href="#apsk">AP(S)K</a></h2>
+<p>Os usos mais simples das modulações descritas acima têm limitações em relação à quantidade de informações que podem ser passadas por tempo, e estão sujeitas a interferências e erros na recepção quando se tenta ultrapassar um certo marco de símbolos mandados em pequenos intervalos. Para atenuar esses efeitos, combinações de modos e codificações surgiram, sendo APSK um bom exemplo.</p>
+<p>Aqui, amplitude e fase da onda são modificadas, cada combinação representando um símbolo/uma sequência de bits. Sua representação é feita em “constelações” (cada ponto advém de certa amplitude e fase únicas àquela sequência de bits):</p>
+<p><img src="./mod_5.png" alt="imagem5_mod" /></p>
+<p>A partir dos modos acima surgiram novos digimodes, muitos dos quais desenvolvidos por amadores que, com algum tipo específico de transmissão em mente, criaram codificações específicas, ou seja, protocolos:</p>
+<p><img src="./mod_6.png" alt="imagem6_mod" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="sdr_sharp.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="antenas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="sdr_sharp.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="antenas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
