@@ -1,0 +1,8 @@
+[book]
+authors = ["helo-m"]
+language = "pt"
+multilingual = false
+src = "src"
+title = "SDR e DX"
+[output.html]
+mathjax-support = true
