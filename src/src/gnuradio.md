@@ -1,3 +1,0 @@
-# GNU Radio
-
-em construção.
