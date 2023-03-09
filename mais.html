@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="modulacoes.html"><strong aria-hidden="true">5.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html"><strong aria-hidden="true">6.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">7.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="gnuradio.html"><strong aria-hidden="true">8.</strong> GNU Radio</a></li><li class="chapter-item expanded "><a href="mais.html" class="active"><strong aria-hidden="true">9.</strong> Mais</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="web_sdr.html"><strong aria-hidden="true">5.</strong> WebSDR</a></li><li class="chapter-item expanded "><a href="modulacoes.html"><strong aria-hidden="true">6.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html"><strong aria-hidden="true">7.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">8.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="mais.html" class="active"><strong aria-hidden="true">9.</strong> Mais</a></li><li class="chapter-item expanded "><a href="glossario.html"><strong aria-hidden="true">10.</strong> Glossário</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -154,15 +154,38 @@
 <h2 id="voice-of-korea"><a class="header" href="#voice-of-korea">Voice of Korea</a></h2>
 <p>Rádio SW estatal norte-coreana “Voice of Korea”, com transmissões em diferentes línguas e uma programação de notícias e música. Os horários estão em UTC. Deve-se observar a área-alvo das transmissões para procurar WebSDR dentro de seu perímetro:</p>
 <p><a href="https://en.wikipedia.org/wiki/Voice_of_Korea">https://en.wikipedia.org/wiki/Voice_of_Korea</a></p>
+<h2 id="gnu-radio"><a class="header" href="#gnu-radio">GNU Radio</a></h2>
+<p>O GNU Radio é uma plataforma em C++ de desenvolvimento de software para SDR gratuita e open-source, usada para processamento de sinais digitais. Por meio de um esquema de blocos montado pelo usuário, um código em Python é gerado e permite-se conectar um hardware externo ou fazer simulações no seu próprio ambiente.</p>
+<p><a href="https://www.gnuradio.org/">https://www.gnuradio.org/</a></p>
+<h2 id="signal-id-wiki"><a class="header" href="#signal-id-wiki">Signal Id Wiki</a></h2>
+<p>No site abaixo é possível identificar os mais diversos tipos de sinais e navegar entre diversas opções ligadas ao mundo da comunicação.</p>
+<p><a href="https://www.sigidwiki.com/wiki/Signal_Identification_Guide">https://www.sigidwiki.com/wiki/Signal_Identification_Guide</a></p>
+<h2 id="in-the-sky"><a class="header" href="#in-the-sky">In the Sky</a></h2>
+<p>In The Sky atualiza 24h o posicionamento de satélites orbitando a Terra. Com essa ferramenta fica fácil saber aonde o sinal do satélite desejado pode ser recebido. É possível também descobrir quais deles estarão passando no céu numa hora e local determinados.</p>
+<p><a href="https://in-the-sky.org/index.php">https://in-the-sky.org/index.php</a></p>
+<h2 id="lista-de-websdrs-usando-kiwisdr"><a class="header" href="#lista-de-websdrs-usando-kiwisdr">Lista de WebSDRs usando KiwiSDR</a></h2>
+<p><a href="http://rx.linkfanel.net/">http://rx.linkfanel.net/</a></p>
+<h2 id="priyom"><a class="header" href="#priyom">Priyom</a></h2>
+<p>Site de monitoramento e log de estações militares, principalmente &quot;<em>number stations</em>&quot;.</p>
+<p><a href="https://priyom.org/">https://priyom.org/</a></p>
+<h2 id="classificação-de-transmissões-itu-por-sigla"><a class="header" href="#classificação-de-transmissões-itu-por-sigla">Classificação de transmissões ITU por sigla</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Types_of_radio_emissions">https://en.wikipedia.org/wiki/Types_of_radio_emissions</a></p>
+<h1 id="recepção-de-sinais-por-satélite"><a class="header" href="#recepção-de-sinais-por-satélite">Recepção de sinais por satélite</a></h1>
+<p>Com certeza um dos projetos mais legais para se trabalhar ao adquirir um RTL-SDR é a recepção de sinais de satélites orbitando a Terra. Ainda assim, não é fácil, já que demanda-se conhecimento do posicionamento do mesmo e de como seu sinal é enviado e codificado. A recepção também pode ser muito ruim sem uma antena ideal bem posicionada e tratamento adequado contra interferências. </p>
+<p>Atualmente, os satélites NOAA-15,18 e 19 (Nasa/NOAA) transmitem imagens de análise climática por APT (Automatic Picture Transmission em AM) e outras informações adicionais em DST (Direct Sound Transmission em PSK), tudo está bem documentado online. Outra opção popular é captar dados e imagens da Estação Espacial Internacional (ISS). Para imagens, é utilizado o modo SSTV (Slow-Scan Television em FM) na forma PD-120 (intervalos de 2 minutos entre fotos) na frequência 145,800 MHz.</p>
+<p>Muitos outros satélites estão constantemente mandando sinais para a Terra, todos estes podendo ser captados com conhecimento prévio de seus tipos de transmissão. Felizmente, não é difícil achar informações online, sem falar que existem centenas de softwares feitos por amadores para decodificar essas mensagens com alguns cliques.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="gnuradio.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="clima.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="glossario.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -170,10 +193,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="gnuradio.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="clima.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="glossario.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

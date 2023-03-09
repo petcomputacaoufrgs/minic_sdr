@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="modulacoes.html"><strong aria-hidden="true">5.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html"><strong aria-hidden="true">6.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">7.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="gnuradio.html"><strong aria-hidden="true">8.</strong> GNU Radio</a></li><li class="chapter-item expanded "><a href="mais.html"><strong aria-hidden="true">9.</strong> Mais</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="web_sdr.html"><strong aria-hidden="true">5.</strong> WebSDR</a></li><li class="chapter-item expanded "><a href="modulacoes.html"><strong aria-hidden="true">6.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html"><strong aria-hidden="true">7.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">8.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="mais.html"><strong aria-hidden="true">9.</strong> Mais</a></li><li class="chapter-item expanded "><a href="glossario.html"><strong aria-hidden="true">10.</strong> Glossário</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,6 +150,13 @@
                         <h1 id="introdução"><a class="header" href="#introdução">Introdução</a></h1>
 <p>O objetivo desse minicurso é incentivar dicentes e outros interessados a aprender mais sobre <em>software defined radio</em>, servindo como porta de entrada para o mundo de DX e tecnologias de rádio no geral. Todo o material aqui apresentado é básico e visa ser um norte para que os leitores pesquisem melhor os temas por conta própria. :)</p>
 <p>~ Ainda em construção. Para sugestões e relacionados mandar mensagem por discord para <em>helô#7070</em>.</p>
+<h2 id="como-resolvi-tratar-o-assunto-e-citar-dxing"><a class="header" href="#como-resolvi-tratar-o-assunto-e-citar-dxing">Como resolvi tratar o assunto e citar DXing</a></h2>
+<p>Acho que é muito mais fácil despertar curiosidade nas pessoas apresentando aplicações práticas e temas que normalmente somos atraídos a conhecer, apesar de (e justamente por) parecerem muito distantes do alcance de um cidadão comum. Para isso, trazer DX me soou como a melhor forma de escrever sobre um assunto sobre o qual eu mesma estava conhecendo.</p>
+<h2 id="tá-mas-o-que-é-dx"><a class="header" href="#tá-mas-o-que-é-dx">Tá, mas o que é DX?</a></h2>
+<p>O DX é uma atividade de lazer consistindo em captar e identificar sinais no espectro de rádio. Fazer DX é um hobby que já existe há algumas décadas, e seus praticantes normalmente também estão ligados ao rádio-amadorismo, interessados em receber e enviar sinais distantes, experimentar com eficiência de sinais e diferentes antenas. Muitas estações ao redor do globo entregam certificados aos que captam, gravam e enviam suas transmissões recebidas.</p>
+<h2 id="isso-faz-parte-da-computação"><a class="header" href="#isso-faz-parte-da-computação">Isso faz parte da computação?</a></h2>
+<p>Sim! As transmissões por ondas eletromagnéticas tiveram seu “boom” durante tempos de guerra; isto junto ao desenvolvimento de computadores rudimentares para codificar e decodificar sinais, a um novo olhar binário das máquinas e a construção de protocolos e convenções tecnológicas. </p>
+<p>O SDR se apresenta como extensão de uma área já dependente da computação que, agora, além de automatizar transmissões, decodificar sinais e tratar de modulações digitais, também incumbe ao software funções classicamente apoiadas só por hardware.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dongle-rtl"><a class="header" href="#dongle-rtl">Dongle RTL</a></h1>
 <h2 id="o-que-é-sdr"><a class="header" href="#o-que-é-sdr">O que é SDR?</a></h2>
 <p>A sigla significa “Software Defined Radio”, ou seja, softwares substituem funções que normalmente seriam hardware num rádio. A adaptabilidade e consequente praticidade desse sistema faz com que a popularidade do SDR cresça e eventualmente torne obsoleto o uso de rádios analógicos.</p>
@@ -200,6 +207,9 @@
 <p><img src="./4_sdrsharp.png" alt="imagem4_sdrs" /></p>
 <h2 id="opções-de-display"><a class="header" href="#opções-de-display">Opções de display</a></h2>
 <p>Ao lado direito do display da intensidade das frequências estão as opções deste. A primeira é o “zoom”, já explicado anteriormente. Em seguida, está o contraste, que serve para aumentar a diferença entre as cores usadas pras intensidades. Embaixo tem-se “range”, que limita ou expande </p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="websdr"><a class="header" href="#websdr">WebSDR</a></h2>
+<p>WebSDRs são sites que hosteam SDRs de forma que qualquer usuário online possa ouvir as frequências suportadas pelo equipamento de quem está disponibilizando sua recepção. Simula-se nestes websites a experiência de possuir um aparelho SDR conectado com um software para recepção. A vantagem principal (além de evitar gastos) é que os WebSDRs mais famosos contam com antenas boas e estão posicionados por todo o mundo. Assim, para ouvir uma transmissão direcionada à certa área longe da posição do ouvinte, é só conectar-se a um desses sites.</p>
+<p>No link <a href="http://websdr.org/">http://websdr.org</a> encontra-se uma boa variedade de WebSDRs pelo mundo, especificadas por amplitude de frequências suportadas, localidade e tipo de antena. Na maior parte destes sites estão as opções necessárias para uma boa exploração, já que é possível escolher entre modulações, amplitude da recepção e filtros de barulho indesejado.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modulações"><a class="header" href="#modulações">Modulações</a></h1>
 <p>A modulação, dentro de uma tal convenção, consiste em uma operação sobre ondas periódicas para que estas assumam a forma específica de um tal modelo que permita passagem de dados. Essa codificação permite embutir informações em ondas eletromagnéticas. Já a de-modulação ocorre para que possamos compreender o sinal de forma mais fácil, transformando este em som ou algum outro formato visual humanamente perceptível (ou no caso de digimode, que seja decodificado para a máquina, que algum software depois decodifica para a recepção humana).</p>
 <p><img src="./1_mod.png" alt="imagem1_mod" /></p>
@@ -231,6 +241,8 @@
 <p><img src="./mod_5.png" alt="imagem5_mod" /></p>
 <p>A partir dos modos acima surgiram novos digimodes, muitos dos quais desenvolvidos por amadores que, com algum tipo específico de transmissão em mente, criaram codificações específicas, ou seja, protocolos:</p>
 <p><img src="./mod_6.png" alt="imagem6_mod" /></p>
+<p>Explorando o espectro será comum encontrar esses modos, alguns bem característicos e identificáveis pelos sons e representação gráfica (observar entre os sites sugeridos os sites que auxiliam na identificação). Protocolos, leis e convenções fazem com que certos digimodes sejam encontrados mais comumente em sub bandas específicas. Alguns modos são dedicados ao envio de texto, imagens, etc. Cada qual com sua codificação e tratamento de erros.</p>
+<p>Dentre os modos mais antigos estão o RTTY (radioteletype), originalmente ele dependia de uma máquina específica, mas já é encontrado em diversos softwares para comunicação em modos digitais e funciona quase como um fax. Outro tipo muito famoso entre os amadores nos últimos anos é o FT8, eficiente mesmo em más condições de transmissão para estabelecer contatos básicos de longo alcance.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="antenas"><a class="header" href="#antenas">Antenas</a></h1>
 <p>Provavelmente o item mais importante para recepção das ondas eletromagnéticas é ela, a antena. Esses pedaços de metal são importantes demais para evitar, mas complexos o suficiente para querer-se explicar apenas o básico necessário. Para cada tipo de aplicação existe uma antena ideal, porém, felizmente, uma já pode ser o suficiente para receber muitas transmissões. É comum que os kits RTL-SDR já venham equipados com uma antena de dipolo básica, que se estende até no máximo um ou dois metros, ou uma antena monopolo pequena. </p>
 <p>O primeiro passo no entendimento de antenas “simples” está no tamanho delas e sua relação com largura de onda. Ao passo que quanto maior a frequência de uma onda eletromagnética, menor sua largura de onda, bandas de frequências mais baixas requerem antenas maiores. Isso porquê a largura de onda está intimamente ligada com o design do transceptor, principalmente nos monopolos. Essas antenas costumam ter entre metade à um quarto da largura da onda alvo. (Pra entendimento técnico sugiro: <a href="https://en.wikipedia.org/wiki/Mast_radiator">https://en.wikipedia.org/wiki/Mast_radiator</a>). As monopolo são muito usadas por rádios FM.</p>
@@ -252,8 +264,7 @@
 <p>Em casos “padrões” a diminuição da refração com o aumento de altitude produz um certo caminho de propagação, no entanto, mudanças climáticas que causam uma menor ou maior queda de refração por altitude modificam esse caminho. Quedas muito bruscas são suficientes para causar a reflexão da onda e mantê-la presa entre uma certa sub-camada da atmosfera e a Terra ou outra sub-camada, possibilitando alcançar pontos normalmente não acessíveis. Esse fenômeno é mais comum durante inversões térmicas (camada baixa fria e seca, camada alta quente e úmida).</p>
 <p><img src="./3_clima.png" alt="imagem3_clima" /></p>
 <h2 id="ionosfera"><a class="header" href="#ionosfera">Ionosfera</a></h2>
-<p>em construção.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="gnu-radio"><a class="header" href="#gnu-radio">GNU Radio</a></h1>
+<h2 id="meteor-scatter"><a class="header" href="#meteor-scatter">Meteor Scatter</a></h2>
 <p>em construção.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mais"><a class="header" href="#mais">Mais</a></h1>
 <p>em construção.</p>
@@ -263,6 +274,27 @@
 <h2 id="voice-of-korea"><a class="header" href="#voice-of-korea">Voice of Korea</a></h2>
 <p>Rádio SW estatal norte-coreana “Voice of Korea”, com transmissões em diferentes línguas e uma programação de notícias e música. Os horários estão em UTC. Deve-se observar a área-alvo das transmissões para procurar WebSDR dentro de seu perímetro:</p>
 <p><a href="https://en.wikipedia.org/wiki/Voice_of_Korea">https://en.wikipedia.org/wiki/Voice_of_Korea</a></p>
+<h2 id="gnu-radio"><a class="header" href="#gnu-radio">GNU Radio</a></h2>
+<p>O GNU Radio é uma plataforma em C++ de desenvolvimento de software para SDR gratuita e open-source, usada para processamento de sinais digitais. Por meio de um esquema de blocos montado pelo usuário, um código em Python é gerado e permite-se conectar um hardware externo ou fazer simulações no seu próprio ambiente.</p>
+<p><a href="https://www.gnuradio.org/">https://www.gnuradio.org/</a></p>
+<h2 id="signal-id-wiki"><a class="header" href="#signal-id-wiki">Signal Id Wiki</a></h2>
+<p>No site abaixo é possível identificar os mais diversos tipos de sinais e navegar entre diversas opções ligadas ao mundo da comunicação.</p>
+<p><a href="https://www.sigidwiki.com/wiki/Signal_Identification_Guide">https://www.sigidwiki.com/wiki/Signal_Identification_Guide</a></p>
+<h2 id="in-the-sky"><a class="header" href="#in-the-sky">In the Sky</a></h2>
+<p>In The Sky atualiza 24h o posicionamento de satélites orbitando a Terra. Com essa ferramenta fica fácil saber aonde o sinal do satélite desejado pode ser recebido. É possível também descobrir quais deles estarão passando no céu numa hora e local determinados.</p>
+<p><a href="https://in-the-sky.org/index.php">https://in-the-sky.org/index.php</a></p>
+<h2 id="lista-de-websdrs-usando-kiwisdr"><a class="header" href="#lista-de-websdrs-usando-kiwisdr">Lista de WebSDRs usando KiwiSDR</a></h2>
+<p><a href="http://rx.linkfanel.net/">http://rx.linkfanel.net/</a></p>
+<h2 id="priyom"><a class="header" href="#priyom">Priyom</a></h2>
+<p>Site de monitoramento e log de estações militares, principalmente &quot;<em>number stations</em>&quot;.</p>
+<p><a href="https://priyom.org/">https://priyom.org/</a></p>
+<h2 id="classificação-de-transmissões-itu-por-sigla"><a class="header" href="#classificação-de-transmissões-itu-por-sigla">Classificação de transmissões ITU por sigla</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Types_of_radio_emissions">https://en.wikipedia.org/wiki/Types_of_radio_emissions</a></p>
+<h1 id="recepção-de-sinais-por-satélite"><a class="header" href="#recepção-de-sinais-por-satélite">Recepção de sinais por satélite</a></h1>
+<p>Com certeza um dos projetos mais legais para se trabalhar ao adquirir um RTL-SDR é a recepção de sinais de satélites orbitando a Terra. Ainda assim, não é fácil, já que demanda-se conhecimento do posicionamento do mesmo e de como seu sinal é enviado e codificado. A recepção também pode ser muito ruim sem uma antena ideal bem posicionada e tratamento adequado contra interferências. </p>
+<p>Atualmente, os satélites NOAA-15,18 e 19 (Nasa/NOAA) transmitem imagens de análise climática por APT (Automatic Picture Transmission em AM) e outras informações adicionais em DST (Direct Sound Transmission em PSK), tudo está bem documentado online. Outra opção popular é captar dados e imagens da Estação Espacial Internacional (ISS). Para imagens, é utilizado o modo SSTV (Slow-Scan Television em FM) na forma PD-120 (intervalos de 2 minutos entre fotos) na frequência 145,800 MHz.</p>
+<p>Muitos outros satélites estão constantemente mandando sinais para a Terra, todos estes podendo ser captados com conhecimento prévio de seus tipos de transmissão. Felizmente, não é difícil achar informações online, sem falar que existem centenas de softwares feitos por amadores para decodificar essas mensagens com alguns cliques.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="glossário"><a class="header" href="#glossário">Glossário</a></h2>
 
                     </main>
 

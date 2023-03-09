@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Antenas - SDR e DX</title>
+        <title>WebSDR - SDR e DX</title>
 
 
         <!-- Custom HTML head -->
@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="web_sdr.html"><strong aria-hidden="true">5.</strong> WebSDR</a></li><li class="chapter-item expanded "><a href="modulacoes.html"><strong aria-hidden="true">6.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html" class="active"><strong aria-hidden="true">7.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">8.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="mais.html"><strong aria-hidden="true">9.</strong> Mais</a></li><li class="chapter-item expanded "><a href="glossario.html"><strong aria-hidden="true">10.</strong> Glossário</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="dongle_rtl.html"><strong aria-hidden="true">2.</strong> Dongle RTL</a></li><li class="chapter-item expanded "><a href="bandas.html"><strong aria-hidden="true">3.</strong> Bandas</a></li><li class="chapter-item expanded "><a href="sdr_sharp.html"><strong aria-hidden="true">4.</strong> SDR#</a></li><li class="chapter-item expanded "><a href="web_sdr.html" class="active"><strong aria-hidden="true">5.</strong> WebSDR</a></li><li class="chapter-item expanded "><a href="modulacoes.html"><strong aria-hidden="true">6.</strong> Modulações</a></li><li class="chapter-item expanded "><a href="antenas.html"><strong aria-hidden="true">7.</strong> Antenas</a></li><li class="chapter-item expanded "><a href="clima.html"><strong aria-hidden="true">8.</strong> Condições climáticas</a></li><li class="chapter-item expanded "><a href="mais.html"><strong aria-hidden="true">9.</strong> Mais</a></li><li class="chapter-item expanded "><a href="glossario.html"><strong aria-hidden="true">10.</strong> Glossário</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,28 +146,19 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="antenas"><a class="header" href="#antenas">Antenas</a></h1>
-<p>Provavelmente o item mais importante para recepção das ondas eletromagnéticas é ela, a antena. Esses pedaços de metal são importantes demais para evitar, mas complexos o suficiente para querer-se explicar apenas o básico necessário. Para cada tipo de aplicação existe uma antena ideal, porém, felizmente, uma já pode ser o suficiente para receber muitas transmissões. É comum que os kits RTL-SDR já venham equipados com uma antena de dipolo básica, que se estende até no máximo um ou dois metros, ou uma antena monopolo pequena. </p>
-<p>O primeiro passo no entendimento de antenas “simples” está no tamanho delas e sua relação com largura de onda. Ao passo que quanto maior a frequência de uma onda eletromagnética, menor sua largura de onda, bandas de frequências mais baixas requerem antenas maiores. Isso porquê a largura de onda está intimamente ligada com o design do transceptor, principalmente nos monopolos. Essas antenas costumam ter entre metade à um quarto da largura da onda alvo. (Pra entendimento técnico sugiro: <a href="https://en.wikipedia.org/wiki/Mast_radiator">https://en.wikipedia.org/wiki/Mast_radiator</a>). As monopolo são muito usadas por rádios FM.</p>
-<p><img src="./1_ant.png" alt="imagem1_antenas" /></p>
-<h2 id="ganho-e-snr"><a class="header" href="#ganho-e-snr">Ganho e SNR</a></h2>
-<p>Um dos conceitos de classificação de antenas é o ganho. Simplificadamente, o ganho de uma antena está ligado ao seu alcance relacionado à uma faixa de radiação. Um alto ganho em uma antena de transmissão faz com que seu feixe de ondas transmitidas seja estreito, mas permite que este alcance distâncias mais longínquas. Ou seja, a energia transmitida está focada em um caminho mais “apertado”. No entanto, o maior alcance nem sempre é um ponto positivo, já que quanto maior a distância percorrida pelo sinal, mais interferências no caminho. Essa quantidade de noise é representada pela medida signal-to-noise ratio (SNR), em decibéis. </p>
-<p><img src="./2_ant.png" alt="imagem2_antenas" /></p>
-<h2 id="direção-e-polarização"><a class="header" href="#direção-e-polarização">Direção e polarização</a></h2>
-<p>Uma antena omnidirecional irradia para todas as direções horizontalmente, sendo as monopolo e dipolos deste tipo. Já as antenas do tipo Yagi-Uda são chamadas de direcionais, mandando o sinal para uma direção específica. </p>
-<p>O conceito de direção da antena não deve ser diretamente confundido com a polarização do sinal. A polarização é especificada a partir da direção do campo elétrico da onda eletromagnética irradiada. Este pode ser classificado como horizontal (EF paralelo à superfície terrestre), vertical ou circular (LHC, rotacionando para à esquerda, ou RHC, rotação à esquerda). Na hora de captar um sinal, sua polarização importa para saber como posicionar a antena.</p>
-<p><img src="./3_ant.png" alt="imagem3_antenas" /></p>
-<p>Por curiosidade, outra antena bem comum de ser vista no dia-a-dia são as antenas parabólicas. Este tipo é considerado direcional de altíssimo ganho, e usado geralmente em transmissões por satélite, radares e em sinais de bem alta frequência, incluindo micro-ondas. Seu sistema é diferente das antenas mais simples, já que usa uma estrutura refletora que leva (ou transmite) o sinal ao foco (aquela parte central). Elas podem ser muito grandes mas estar tratando sinais de largura de onda muito pequena. </p>
+                        <h2 id="websdr"><a class="header" href="#websdr">WebSDR</a></h2>
+<p>WebSDRs são sites que hosteam SDRs de forma que qualquer usuário online possa ouvir as frequências suportadas pelo equipamento de quem está disponibilizando sua recepção. Simula-se nestes websites a experiência de possuir um aparelho SDR conectado com um software para recepção. A vantagem principal (além de evitar gastos) é que os WebSDRs mais famosos contam com antenas boas e estão posicionados por todo o mundo. Assim, para ouvir uma transmissão direcionada à certa área longe da posição do ouvinte, é só conectar-se a um desses sites.</p>
+<p>No link <a href="http://websdr.org/">http://websdr.org</a> encontra-se uma boa variedade de WebSDRs pelo mundo, especificadas por amplitude de frequências suportadas, localidade e tipo de antena. Na maior parte destes sites estão as opções necessárias para uma boa exploração, já que é possível escolher entre modulações, amplitude da recepção e filtros de barulho indesejado.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="modulacoes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="sdr_sharp.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="clima.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="modulacoes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -177,11 +168,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="modulacoes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="sdr_sharp.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="clima.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="modulacoes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
