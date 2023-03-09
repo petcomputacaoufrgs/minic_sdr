@@ -16,4 +16,6 @@ Em casos “padrões” a diminuição da refração com o aumento de altitude p
 
 ## Ionosfera
 
+## Meteor Scatter
+
 em construção.

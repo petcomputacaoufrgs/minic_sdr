@@ -60,3 +60,7 @@ Aqui, amplitude e fase da onda são modificadas, cada combinação representando
 A partir dos modos acima surgiram novos digimodes, muitos dos quais desenvolvidos por amadores que, com algum tipo específico de transmissão em mente, criaram codificações específicas, ou seja, protocolos:
 
 ![imagem6_mod](./mod_6.png)
+
+Explorando o espectro será comum encontrar esses modos, alguns bem característicos e identificáveis pelos sons e representação gráfica (observar entre os sites sugeridos os sites que auxiliam na identificação). Protocolos, leis e convenções fazem com que certos digimodes sejam encontrados mais comumente em sub bandas específicas. Alguns modos são dedicados ao envio de texto, imagens, etc. Cada qual com sua codificação e tratamento de erros.
+
+Dentre os modos mais antigos estão o RTTY (radioteletype), originalmente ele dependia de uma máquina específica, mas já é encontrado em diversos softwares para comunicação em modos digitais e funciona quase como um fax. Outro tipo muito famoso entre os amadores nos últimos anos é o FT8, eficiente mesmo em más condições de transmissão para estabelecer contatos básicos de longo alcance.

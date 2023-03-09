@@ -1,0 +1,5 @@
+## WebSDR
+
+WebSDRs são sites que hosteam SDRs de forma que qualquer usuário online possa ouvir as frequências suportadas pelo equipamento de quem está disponibilizando sua recepção. Simula-se nestes websites a experiência de possuir um aparelho SDR conectado com um software para recepção. A vantagem principal (além de evitar gastos) é que os WebSDRs mais famosos contam com antenas boas e estão posicionados por todo o mundo. Assim, para ouvir uma transmissão direcionada à certa área longe da posição do ouvinte, é só conectar-se a um desses sites.
+
+No link [http://websdr.org](http://websdr.org/) encontra-se uma boa variedade de WebSDRs pelo mundo, especificadas por amplitude de frequências suportadas, localidade e tipo de antena. Na maior parte destes sites estão as opções necessárias para uma boa exploração, já que é possível escolher entre modulações, amplitude da recepção e filtros de barulho indesejado.
